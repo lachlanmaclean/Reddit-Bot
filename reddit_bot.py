@@ -52,7 +52,7 @@ def run_bot(r, comment_id_list):
 				with open ("comments.txt", "a") as f: 	#opens the text file holding the ids of the comments already messaged
 					f.write(comment.id + "\n")			#adds to the list
 				print "Comment posted!"
-						#Sleep only if comment posted re RATELIMIT
+				time.sleep(900)		#Sleep only if comment posted re RATELIMIT
 
 def get_saved_comments():
 	if not os.path.isfile("comments.txt"):				#if the txt file doesn't exist, just use local list
@@ -71,8 +71,7 @@ while True: #forever loop
 	selected_sub = random.choice(subreddits)	#Each loop, picks a new subreddit
 	run_bot(r, comment_id_list)					#runs bot through sub
 	delete_bad_posts()
-	print "Will try again in fifteen minutes"
-	time.sleep(900)
+	
 
 												#goes through past posts and deleted
 												#negative karma
