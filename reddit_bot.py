@@ -43,7 +43,7 @@ def run_bot(r, comment_id_list):
 
 				####################################
 
-				#comment.reply(reply)  					#submits our message to reddit as a comment reply
+				comment.reply(reply)  					#submits our message to reddit as a comment reply
 
 				###################################
 
