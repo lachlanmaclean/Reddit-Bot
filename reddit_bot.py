@@ -29,7 +29,7 @@ def delete_bad_posts():
 
 def run_bot(r, comment_id_list):
 
-	print "Scanning r/" + selected_sub
+	print "r/" + selected_sub + " selected"
 	for comment in r.subreddit(selected_sub).comments(limit=25): #Chooses the subreddit the bot will scan
 
 		if comment.body.split(' ',2)[0] == "I'm" and comment.id not in comment_id_list and comment.author.name != r.user.me(): #sets parameters for which we find comments
