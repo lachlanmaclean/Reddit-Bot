@@ -52,7 +52,7 @@ def run_bot(r, comment_id_list):
 				with open ("comments.txt", "a") as f: 	#opens the text file holding the ids of the comments already messaged
 					f.write(comment.id + "\n")			#adds to the list
 				print "Comment posted!"
-				time.sleep(900)		#Sleep only if comment posted re RATELIMIT
+				time.sleep(600)		#Sleep only if comment posted re RATELIMIT
 
 def get_saved_comments():
 	if not os.path.isfile("comments.txt"):				#if the txt file doesn't exist, just use local list
